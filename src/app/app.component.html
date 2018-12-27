@@ -24,11 +24,24 @@
 <br />
 <br />
 <form *ngIf="showForm">
+
   <h2>Player Details</h2>
-  <p>First Name:<input type="text" name=firstName [(ngModel)]="formPlayer.firstName" /></p>
-  <p>Last Name:<input type="text" name=lastName [(ngModel)]="formPlayer.lastName" /></p>
-  <p>Description Name:<input type="text" name=description [(ngModel)]="formPlayer.description" /></p>
-  <p>
-    <button type="button" class="btn btn-primary" (click)="SavePlayer(formPlayer)">Submit</button>
-  </p>
+
+  <div class="row" style="margin-left: 10px">
+    <div class="col-md-2 offset-2">First Name</div>
+    <div class="col-md-4 offset-2"><input type="text" name=firstName [(ngModel)]="formPlayer.firstName" /></div>
+  </div><br />
+  <div class="row" style="margin-left: 10px">
+    <div class="col-md-2 offset-2">Last name</div>
+    <div class="col-md-4 offset-2"><input type="text" name=lastName [(ngModel)]="formPlayer.lastName" /></div>
+  </div><br />
+  <div class="row" style="margin-left: 10px">
+    <div class="col-md-2 offset-2">Description</div>
+    <div class="col-md-4 offset-2"><input type="text" name=description [(ngModel)]="formPlayer.description" /></div>
+  </div>
+  <div class="row" style="margin-left: 10px">
+    <p>
+      <button type="button" class="btn btn-primary" (click)="SavePlayer(formPlayer)">Submit</button>
+    </p>
+  </div>
 </form>

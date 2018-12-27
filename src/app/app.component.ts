@@ -18,9 +18,9 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
+    //  this.playerservice.getPlayers().subscribe(data => this.players = data);
     this.playerservice.getPlayers()
-      .then(players => this.players = players)
-      .catch(error => console.log(error));
+      .then(data => this.players = data);
   }
   ShowPlayerForm(player: BasketballPlayer) {
     if (!player) {
